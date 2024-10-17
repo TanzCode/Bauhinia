@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #messageBox {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+        }
+
+        #closeButton {
+            cursor: pointer;
+            background-color: #f5c6cb;
+            color: #721c24;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="showMessageBox()">Show Message Box</button>
+
+<div id="messageBox">
+    <p>This is a simple message box.</p>
+    <button id="closeButton" onclick="closeMessageBox()">Close</button>
+</div>
+
+<script>
+    function showMessageBox() {
+        var messageBox = document.getElementById("messageBox");
+        messageBox.style.display = "block";
+    }
+
+    function closeMessageBox() {
+        var messageBox = document.getElementById("messageBox");
+        messageBox.style.display = "none";
+    }
+</script>
+
+</body>
+</html>

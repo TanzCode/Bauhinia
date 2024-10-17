@@ -1,0 +1,53 @@
+ body {
+            padding-top: 0px; /* Adjust based on your header height */
+        }
+
+        .navbar {
+            background-color: #BC8CF2;
+            color: #eeeeee;
+        }
+
+        .navbar-brand img {
+            width: 175px;
+           
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+           /* font-family: verdana;*/
+            font-size: 18px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffffff; 
+        }
+
+        .navbar-nav .btn {
+            font-family: verdana;
+            font-size: 20px;
+        }
+
+       
+        .btn-signup {
+            background-color: #AA14F0;
+            color: #ffffff;
+            border: 1px solid #AA14F0;
+        }
+
+        
+        .btn-login {
+            background-color: #AA14F0; 
+            color: #ffffff;
+            border: 1px solid #AA14F0;
+        }
+         
+        .navbar-form .form-control {
+            border-color: #ffffff;
+        }
+
+        
+        .navbar-nav .nav-link i {
+            color: #ffffff;
+            font-size: 24px;
+            margin-right: 10px;
+        }

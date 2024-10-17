@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="nevigation.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <title>Your Page Title</title>
+</head>
+
+<body>
+
+   <header id="header" class="header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Order Details Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="orderDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Order Details
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="orderDropdown">
+                        <!-- Add dropdown items as needed -->
+                        <a class="dropdown-item" href="#">Order Item List</a>
+                        <a class="dropdown-item" href="#">Order Delivery details </a>
+                        <a class="dropdown-item" href="#">Daily order Report </a>
+                    </div>
+                </li>
+
+                <!-- Product Details Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Product Details
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="productDropdown">
+                        
+                        <a class="dropdown-item" href="#">Product availability</a>
+                        <a class="dropdown-item" href="#">Product availability report</a>
+                        
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="inventoryManagement.html" id="inventoryDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Inventory Management
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="inventoryDropdown">
+                        
+                        <a class="dropdown-item" href="inventoryManagement.html">Add items </a>
+                        <a class="dropdown-item" href="inventory_search.php">manage inventory</a>
+                    </div>
+                </li>
+
+      
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="incomeDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Income Details
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="incomeDropdown">
+                       
+                        <a class="dropdown-item" href="sales.html">sales</a>
+                        <a class="dropdown-item" href="incomeReport">Income report</a>
+                    </div>
+                </li>
+
+                <!-- Logout -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<br><br><br>
+<hr>
+<div style="position: relative;">
+    <!-- Staff Dashboard Image -->
+    <img src="bg.png" class="image mx-auto d-block" style="width: 1500px; height: 700px;">
+<div class="container" id="container">  
+<!--Images-->
+
+
+    <!-- Buttons -->
+    <button class="btn btn-outline-info" style="position: absolute; top: 150px; left: 100px; background-color: rgba(0, 0, 0, 0.7); margin-top: -100px; margin-left: 100px;">
+        <h1 style="font-size: 20px; color: #ffffff;"> 
+            <img src="r (3).jpg" alt="Button Image" style="width: 300px; height: 200px;"><br> Daily Order Reports
+        </h1>
+    </button>
+
+    <br>
+
+    <button class="btn btn-outline-info" style="position: absolute; top: 400px; left: 100px; background-color: rgba(0, 0, 0, 0.7); margin-top: -340px; margin-left: 700px;">
+        <h1 style="font-size: 20px; color: #ffffff;"> 
+            <img src="r (1).jpg" alt="Button Image" style="width: 300px; height: 200px;"><br> Daily Product Availability Reports
+        </h1>
+    </button>
+
+
+    <button class="btn btn-outline-info" style="position: absolute; top: 650px; left: 100px; background-color: rgba(0, 0, 0, 0.7); margin-top: -300px; margin-left: 100px;">
+        <h1 style="font-size: 20px; color: #ffffff;"> 
+            <img src="r (1).png" alt="Button Image" style="width: 300px; height: 200px;"> <br>Inventory Management
+        </h1>
+    </button>
+
+    <button class="btn btn-outline-info" style="position: absolute; top: 900px; left: 100px; background-color: rgba(0, 0, 0, 0.7); margin-top: -540px; margin-left: 700px;">
+        <h1 style="font-size: 20px; color: #ffffff;"> 
+            <img src="r (2).jpg" alt="Button Image" style="width: 300px; height: 200px; margin-bottom: 10px;"> <br>Monthly Income Reports
+        </h1>
+    </button>
+</div>
+</div>
+
+
+
+
+
+    <footer>
+        <div class="container footer-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Bauhinia clothing. All rights reserved.</p>
+                    <p>111 Main Street, Colombo, Srilanka</p>
+                </div>
+                <div class="col-md-6 social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function showDropdown(element) {
+            element.classList.add("active");
+        }
+
+        function hideDropdown(element) {
+            element.classList.remove("active");
+        }
+
+        function loadHome() {
+            document.getElementById("mainContent").src = "InventoryManagement.html";
+        }
+
+        function LoadServices() {
+            document.getElementById("mainContent").src = "services.html";
+        }
+
+        function loadContact() {
+            document.getElementById("mainContent").src = "contactUs.html";
+        }
+
+        function loadAboutUs() {
+            document.getElementById("mainContent").src = "aboutUs.html";
+        }
+    </script>
+
+</body>
+
+</html>

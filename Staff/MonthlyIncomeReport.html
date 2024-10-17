@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Income Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('path/to/your/image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+        }
+
+        h1 {
+            text-align: center;
+            color: #AA14F0;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #AA14F0;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Monthly Income Report</h1>
+
+     <div id="successMessage" class="text-success"></div>
+        <form onsubmit="return handleFormSubmit()">
+        <label for="reportID">Report ID:</label>
+        <input type="text" id="reportID" name="reportID" required>
+
+        <label for="month">Month:</label>
+        <input type="text" id="month" name="month" required>
+
+        <label for="receiptID">Receipt ID:</label>
+        <input type="text" id="receiptID" name="receiptID" required>
+
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" required>
+
+        <button type="button" onclick="generateMonthlyIncomeReport(),handleFormSubmit()">Generate Monthly Income Report</button>
+
+         <button type="button" onclick="printReport()">Print Report</button>
+    </form>
+
+    <table id="monthlyIncomeReportTable" style="display: none;">
+        <tr>
+            <th>Report ID</th>
+            <th>Month</th>
+            <th>Receipt ID</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </table>
+
+   
+
+    <script>
+        function generateMonthlyIncomeReport() {
+            var reportID = document.getElementById('reportID').value;
+            var month = document.getElementById('month').value;
+            var receiptID = document.getElementById('receiptID').value;
+            var amount = document.getElementById('amount').value;
+
+            if (reportID && month && receiptID && amount) {
+                var table = document.getElementById('monthlyIncomeReportTable');
+                var row = table.insertRow(1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+
+                cell1.innerHTML = reportID;
+                cell2.innerHTML = month;
+                cell3.innerHTML = receiptID;
+                cell4.innerHTML = amount;
+                cell5.innerHTML = new Date().toLocaleDateString();
+
+                document.getElementById('monthlyIncomeReportTable').style.display = 'table';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+
+         function printReport() {
+            window.print();
+        }
+
+
+        function handleFormSubmit() {
+            // Simulate form submission logic
+/*
+            // Clear the form fields
+            document.getElementById('itemCode').value = '';
+            document.getElementById('itemName').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('size').value = '';
+            document.getElementById('prize').value = '';
+            document.getElementById('quantity').value = '';*/
+            
+
+
+            // Display success message
+            document.getElementById('successMessage').innerHTML = 'The Data added successfuly to the report!';
+
+            // Prevent actual form submission
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

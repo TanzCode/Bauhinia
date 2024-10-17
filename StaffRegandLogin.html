@@ -1,0 +1,124 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Registration and Login</title>
+    <link rel="stylesheet" href="cusStyle.css">
+
+    <link href="fontawesome-free-5.15.4-web\css\all.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <h2>Staff Registration and Login</h2>
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form onsubmit="return handleFormSubmit()">
+            <h1>Create Account</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>Use your Staff ID for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Staff ID" />
+            
+            
+            <input type="tel" id="telephone1" name="telephone" placeholder="Telephone number" required>
+            <input type="text" placeholder="Job role" />
+            <input type="email" placeholder="E-mail" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="confirm password" />
+            
+
+        
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form action="index.html" method="POST">
+            <h1>Sign in</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button>Sign In</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+
+            <div class="overlay-panel overlay-left">
+                <div>
+               <img src="logo.png">
+               <br>
+               <br>
+               <br>
+               <br>
+               </div>
+
+<br>
+               <br>
+               <br>
+               <br>
+                <h1>Welcome to BAUHEINIA!</h1>
+               
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <img src="logo.png">
+                <h1>Hello, Welcome to BAUHINIA clothing!</h1>
+                <p>Enter details that provide from BAUHINIA clothing to sign up to the system</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+});
+</script>
+<script>
+        function handleFormSubmit() {
+            // Simulate form submission logic
+/*
+            // Clear the form fields
+            document.getElementById('itemCode').value = '';
+            document.getElementById('itemName').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('size').value = '';
+            document.getElementById('prize').value = '';
+            document.getElementById('quantity').value = '';*/
+            
+
+
+            // Display success message
+            document.getElementById('successMessage').innerHTML = 'The item Already added!';
+
+            // Prevent actual form submission
+            return false;
+        }
+    </script>
+
